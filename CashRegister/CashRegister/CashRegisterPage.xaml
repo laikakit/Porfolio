@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CashRegister.CashRegisterPage"
+             Padding="10,30,10,30"
+             BackgroundColor="Gray"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Manager" Clicked="ManagerButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0">
+            <Label FontSize="Title" Text="Avaliable Products"></Label>
+            <ListView x:Name="inventory" BackgroundColor="CornflowerBlue" ItemTapped="inventory_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Label Text="{Binding name}" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="Quantity:"></Label>
+                                <Label Text="{Binding inventory}"/>
+                                <Label Text="Price:"></Label>
+                                <Label Text="{Binding price}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal">
+                 <Label FontSize="Title" Text="Cart" HorizontalOptions="StartAndExpand"></Label>
+                <Label FontSize="Title" Text="Current Total: "></Label>
+                <Label FontSize="Title" Text="" x:Name="total"></Label>
+            </StackLayout>
+            <ListView x:Name="currentcart" BackgroundColor="CornflowerBlue">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remove" IsDestructive="True" Clicked="DeleteFromCart_Clicked" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Label Text="{Binding name}" HorizontalOptions="StartAndExpand"/>
+                                <Label>Quantity:</Label>
+                                <Label Text="{Binding inventory}"/>
+                                <Label>Price:</Label>
+                                <Label Text="{Binding price}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="Title" Text="Product: "></Label>
+                <Label FontSize="Title" Text="" x:Name="product"></Label>
+            </StackLayout>
+            <Grid RowSpacing="5" ColumnSpacing="5" VerticalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="" TextColor="Black" x:Name="number" BackgroundColor="CornflowerBlue" FontSize="Large" HorizontalTextAlignment="Center"/>
+                <Button Grid.Row="1" Grid.Column="0" Text="1" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="2" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="3" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="0" Text="4" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="5" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="2" Text="6" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="0" Text="7" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="8" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="2" Text="9" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="4" Grid.Column="0" Text="0" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Number_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Text="Add to Cart" TextColor="White" BackgroundColor="CornflowerBlue" FontSize="Default" BorderRadius="10" Clicked="AddToCart_Clicked" x:Name="AddToCartButton" IsEnabled="False"/>
+                <Button Grid.Row="3" Grid.Column="3" Grid.RowSpan="2" Text="Buy" TextColor="White" BackgroundColor="CornflowerBlue" FontSize="Default" BorderRadius="10" Clicked="Buy_Clicked"/>
+                <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="Clear" TextColor="White" BackgroundColor="CornflowerBlue" FontSize="Default" BorderRadius="10" Clicked="Clear_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

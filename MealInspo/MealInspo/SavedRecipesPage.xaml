@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="MealInspo.SavedRecipesPage"
+			 Title="Saved"
+			 IconImageSource="bookmark_white.png">
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear All"
+					 Clicked="ClearAll_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="recipeListView"
+				  VerticalOptions="FillAndExpand"
+				  HasUnevenRows="True"
+				  ItemTapped="recipe_ItemTapped"
+				  SeparatorVisibility="None">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.ContextActions>
+							<MenuItem Text="Remove Recipe"
+				                      IsDestructive="True"
+				                      Clicked="DeleteRecipe_Clicked"
+				                      CommandParameter="{Binding .}"/>
+						</ViewCell.ContextActions>
+						<StackLayout VerticalOptions="FillAndExpand">
+							<Image HeightRequest="300"
+								   MinimumWidthRequest="160"
+								   WidthRequest="160"
+								   Source="{Binding image}"
+								   HorizontalOptions="FillAndExpand"
+								   VerticalOptions="FillAndExpand"
+								   Aspect="AspectFill" />
+							<!--<StackLayout Orientation="Horizontal" VerticalOptions="Center">
+								<Label Text="{Binding label}"/>
+								<Label Text="Calories: " HorizontalOptions="EndAndExpand"/>
+								<Label Text="{Binding calories}"/>
+								<Label Text="Time Required: " HorizontalOptions="EndAndExpand"/>
+								<Label Text="{Binding totalTime}"/>
+							</StackLayout>-->	
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "c3S5bAWtfiWtWi9BPT3YiaNiE0soDOzsPx0X7OrJJp1rB/+AHlUs4NdmA1YLLLKtB1ApPCu7afSQc01Prf0stA==",
+  "success": true,
+  "projectFilePath": "/Users/josephlai/Desktop/MAP526/CashRegister/CashRegister.iOS/CashRegister.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/josephlai/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/josephlai/.nuget/packages/xamarin.forms/4.8.0.1451/xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}

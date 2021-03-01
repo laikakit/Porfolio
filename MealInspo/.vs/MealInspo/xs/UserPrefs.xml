@@ -1,0 +1,52 @@
+﻿<Properties HasIOSDesignerOverlayBeenDismissed="True" StartupConfiguration="{62BA1E9A-0554-4762-B3AD-E0D67C5363B0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MealInspo/SearchPage.xaml">
+    <Files>
+      <File FileName="MealInspo/TabbedHomePage.xaml" Line="9" Column="14" />
+      <File FileName="MealInspo/AssemblyInfo.cs" />
+      <File FileName="MealInspo/APIRecipeDetailsPage.xaml" />
+      <File FileName="MealInspo/TabbedHomePage.xaml.cs" />
+      <File FileName="MealInspo/DBRecipeDetailsPage.xaml" />
+      <File FileName="MealInspo/SearchPage.xaml" Line="41" Column="26" />
+      <File FileName="MealInspo/SearchPage.xaml.cs" />
+      <File FileName="MealInspo/SavedRecipesPage.xaml.cs" />
+      <File FileName="MealInspo/SavedRecipesPage.xaml" />
+      <File FileName="MealInspo/DBManager.cs" />
+      <File FileName="MealInspo/Model/NetworkingManager.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MealInspo" expanded="True">
+            <Node name="MealInspo" expanded="True">
+              <Node name="Model" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="Fonts" expanded="True" />
+              </Node>
+              <Node name="APIRecipeDetailsPage.xaml" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="SavedRecipesPage.xaml" expanded="True" />
+              <Node name="SearchPage.xaml" expanded="True" selected="True" />
+              <Node name="TabbedHomePage.xaml" expanded="True" />
+            </Node>
+            <Node name="MealInspo.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="MealInspo.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MealInspo.Android FirstBuild="True" PreferredExecutionTarget="Android.Pixel_4_XL_API_30" />
+  <MonoDevelop.Ide.ItemProperties.MealInspo.iOS automaticSigning="False" TriggeredFromHotReload="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11D7652B-014B-4792-8E5E-E125B43BDDE0" Xamarin.HotReload.DebuggerTimeoutException.MealInspo.iOS.HideInfoBar="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MealInspo.DBRecipeDetailsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+		<RelativeLayout x:Name="container">
+			<BoxView Color="CornflowerBlue"
+					 x:Name="Banner"
+					 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+																		   Property=Width,
+																		   Factor=1}"
+
+					 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+																		    Property=Width,
+																		    Factor=0.5}"/>
+
+			<BoxView Color="AliceBlue"
+					 x:Name="PictureBox"
+					 WidthRequest="320"
+					 HeightRequest="320"
+					 CornerRadius="15"
+					 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+																		    ElementName=Banner,
+																		    Property=Width,
+																			Factor=0.5,
+																			Constant=-160}"
+
+					 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																		    ElementName=Banner,
+																		    Property=Height,
+																			Factor=1,
+																			Constant=-160}"/>
+
+			<Image x:Name="recipePicture"
+				   WidthRequest="300"
+				   HeightRequest="300"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+																		  ElementName=Banner,
+																		  Property=Width,
+																		  Factor=0.5,
+																		  Constant=-150}"
+
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																		  ElementName=Banner,
+																		  Property=Height,
+																		  Factor=1,
+																		  Constant=-150}">
+				<Image.Source>
+					<FileImageSource File="{Binding SomeImage}" />
+				</Image.Source>
+			</Image>
+			
+			<Label x:Name="RecipeName"
+		           Text=""
+		           FontSize="30"
+				   Padding="20,0,0,0"
+		           FontFamily=""
+		           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																		  ElementName=PictureBox,
+																          Property=Height,
+																		  Factor=1,
+																		  Constant=100}"/>
+			<StackLayout Padding="20,0,0,0"
+				         Orientation="Horizontal"
+				 	     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																			    ElementName=PictureBox,
+																			    Property=Height,
+																			    Factor=1,
+																			    Constant=180}">
+
+				<Label Text="Calories: "
+		               FontSize="Large"/>
+				<Label x:Name="RecipeCalorie"
+		               Text=""
+		               FontSize="Large"/>
+			</StackLayout>
+
+			<StackLayout Padding="20,0,0,0"
+				         Orientation="Horizontal"
+				 	     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																			    ElementName=PictureBox,
+																			    Property=Height,
+																			    Factor=1,
+																			    Constant=240}">
+
+				<Label Text="Time Required: "
+		               FontSize="Large"/>
+				<Label x:Name="RecipeTimeRequired"
+		               Text=""
+		               FontSize="Large"/>
+				<Label Text=" minutes"
+		               FontSize="Large"/>
+			</StackLayout>
+			
+			<Label Text="Ingredients:"
+		           FontSize="Large"
+		           Padding="20,0,0,0"
+		           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																		  ElementName=PictureBox,
+																          Property=Height,
+																		  Factor=1,
+																		  Constant=300}"/>
+            <ListView  x:Name="ingredientslist"
+				       HasUnevenRows="False"
+					   HeightRequest="245"
+					   SeparatorVisibility="None"
+					   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+																		      ElementName=PictureBox,
+																		      Property=Height,
+																			  Factor=1,
+																			  Constant=350}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}"
+								   Padding="20,0,20,0"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="MealInspo.SearchPage"
+			 Title="Search"
+			 IconImageSource="search_white.png">
+    <StackLayout>
+	    <StackLayout>
+		    <SearchBar TextChanged="OnTextChanged"
+			   	       Placeholder="Search by ingredients (Separate with ',') ..."
+					   SearchButtonPressed="SearchButton_Clicked"
+					   Margin="0,0,0,0"/>
+	    </StackLayout>
+		<ListView x:Name="recipeListView"
+			      VerticalOptions="FillAndExpand"
+			      HasUnevenRows="True"
+			      ItemTapped="recipeListView_ItemTapped"
+			      SeparatorVisibility="None">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout VerticalOptions="FillAndExpand">
+							<Image HeightRequest="300"
+								   MinimumWidthRequest="160"
+								   WidthRequest="160"
+								   Source="{Binding image}"
+								   HorizontalOptions="FillAndExpand"
+								   VerticalOptions="FillAndExpand"
+								   Aspect="AspectFill"
+								   Margin="0"/>
+							<!--<StackLayout Orientation="Horizontal"
+										 VerticalOptions="Center"
+										 MinimumHeightRequest="10">
+								<Label Text="{Binding label}"
+									   VerticalOptions="Center"/>
+								<Label Text="Calories: "
+									   HorizontalOptions="EndAndExpand"
+									   VerticalOptions="Center"/>
+								<Label Text="{Binding calories}"
+									   VerticalOptions="Center"/>
+							</StackLayout>-->	
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>

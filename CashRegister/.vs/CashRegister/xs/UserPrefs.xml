@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{7A2ED4F4-F4CD-4DAE-851B-897B21E5826A}|Default" HasHotReloadOverlayBeenDismissed="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CashRegister/MainPage.xaml">
+    <Files>
+      <File FileName="CashRegister/App.xaml.cs" Line="9" Column="9" />
+      <File FileName="CashRegister/App.xaml" />
+      <File FileName="CashRegister/MainPage.xaml.cs" />
+      <File FileName="CashRegister/AddNewProductPage.xaml.cs" />
+      <File FileName="CashRegister/HistoryPage.xaml.cs" />
+      <File FileName="CashRegister/CashRegisterPage.xaml" />
+      <File FileName="CashRegister/AddNewProductPage.xaml" />
+      <File FileName="CashRegister/RestockPage.xaml" />
+      <File FileName="CashRegister/RestockPage.xaml.cs" />
+      <File FileName="CashRegister/CashRegisterPage.xaml.cs" />
+      <File FileName="CashRegister/MainPage.xaml" Line="13" Column="1" />
+      <File FileName="CashRegister/ManagerPage.xaml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CashRegister" expanded="True">
+            <Node name="CashRegister" expanded="True">
+              <Node name="AddNewProductPage.xaml" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="CashRegisterPage.xaml" expanded="True" />
+              <Node name="HistoryPage.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
+              <Node name="ManagerPage.xaml" expanded="True" />
+              <Node name="RestockPage.xaml" expanded="True" />
+            </Node>
+            <Node name="CashRegister.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CashRegister.Android PreferredExecutionTarget="Android.pixel_2_marshmallow_6_0_-_api_23" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CashRegister.iOS TriggeredFromHotReload="False" Xamarin.HotReload.UnhandledDeviceException.CashRegister.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11D7652B-014B-4792-8E5E-E125B43BDDE0" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

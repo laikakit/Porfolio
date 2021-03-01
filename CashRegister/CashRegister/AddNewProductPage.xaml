@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CashRegister.AddNewProductPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="5">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Product Name"></Label>
+                <Entry x:Name="pname" WidthRequest="100"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Product Inventory"></Label>
+                <Entry x:Name="pinventory" WidthRequest="100"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Product Price"></Label>
+                <Entry x:Name="pprice" WidthRequest="100"></Entry>
+            </StackLayout>
+            <Button Text="Add Product" TextColor="White" BackgroundColor="CornflowerBlue" BorderRadius="10" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

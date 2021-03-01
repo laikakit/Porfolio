@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CashRegister.RestockPage">
+    <ContentPage.Content>
+        <ListView x:Name="inventory" BackgroundColor="CornflowerBlue" ItemTapped="inventory_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remove" IsDestructive="True" Clicked="DeleteFromStock_Clicked" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Label Text="{Binding name}" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="Quantity:"></Label>
+                                <Label Text="{Binding inventory}"/>
+                                <Label Text="Price:"></Label>
+                                <Label Text="{Binding price}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    </ContentPage.Content>
+</ContentPage>

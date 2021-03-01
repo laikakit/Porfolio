@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MealInspo.MainPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Search Page" Clicked="SearchButton_Clicked"></Button>
+            <Button Text="Saved Recipes" Clicked="SavedRecipeButton_Clicked"></Button>
+            <!--<Button Text="Clear Recipes" Clicked="ClearSavedRecipeButton_Clicked"></Button>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
